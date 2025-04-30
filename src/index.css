@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Clan Pro";
+  src: url(./fonts/clan-pro-cufonfonts/FFClanProRegular.TTF);
+}
+@font-face {
+  font-family: "Clan Pro";
+  font-weight: 700;
+  src: url(./fonts/clan-pro-cufonfonts/FFClanProBold.TTF);
+}
+
+* {
+  @apply text-gray-700 antialiased;
+  font-family: "Clan Pro", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+*::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+input::placeholder {
+  @apply text-gray-100 opacity-70 text-sm;
+}
+
+@layer utilities {
+  .page {
+    @apply flex flex-col px-2 fixed inset-0 overflow-hidden;
+  }
+}
